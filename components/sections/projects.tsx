@@ -20,8 +20,8 @@ const projectsByLevel = {
       github: "#",
       difficulty: "Básico",
       media: [
-        { type: "image", src: "/task-api.jpg" },
-        { type: "image", src: "/api-docs.jpg" },
+        { type: "image" as const, src: "/task-api.jpg" },
+        { type: "image" as const, src: "/api-docs.jpg" },
       ],
       recommendation: "Perfecto para aprender REST APIs y Express.js. Inicia con modelos básicos de datos.",
     },
@@ -35,8 +35,8 @@ const projectsByLevel = {
       github: "#",
       difficulty: "Básico",
       media: [
-        { type: "image", src: "/react-components.jpg" },
-        { type: "image", src: "/form-validation.jpg" },
+        { type: "image" as const, src: "/react-components.jpg" },
+        { type: "image" as const, src: "/form-validation.jpg" },
       ],
       recommendation: "Aprende gestión de estado con hooks (useState, useEffect) y consumo de APIs.",
     },
@@ -50,8 +50,8 @@ const projectsByLevel = {
       github: "#",
       difficulty: "Básico",
       media: [
-        { type: "image", src: "/python-app.jpg" },
-        { type: "image", src: "/database-schema.jpg" },
+        { type: "image" as const, src: "/python-app.jpg" },
+        { type: "image" as const, src: "/database-schema.jpg" },
       ],
       recommendation: "Domina conexiones a bases de datos y operaciones CRUD desde Python.",
     },
@@ -65,8 +65,8 @@ const projectsByLevel = {
       github: "#",
       difficulty: "Básico",
       media: [
-        { type: "image", src: "/swagger-ui.jpg" },
-        { type: "image", src: "/api-validation.jpg" },
+        { type: "image" as const, src: "/swagger-ui.jpg" },
+        { type: "image" as const, src: "/api-validation.jpg" },
       ],
       recommendation: "Aprende FastAPI como alternativa moderna a Flask. Documentación automática incluida.",
     },
@@ -82,9 +82,9 @@ const projectsByLevel = {
       github: "#",
       difficulty: "Intermedio",
       media: [
-        { type: "image", src: "/blog-home.jpg" },
-        { type: "image", src: "/post-editor.jpg" },
-        { type: "image", src: "/general-data-dashboard.png" },
+        { type: "image" as const, src: "/blog-home.jpg" },
+        { type: "image" as const, src: "/post-editor.jpg" },
+        { type: "image" as const, src: "/general-data-dashboard.png" },
       ],
       recommendation: "Integra Next.js con PostgreSQL, implementa autenticación y server-side rendering.",
     },
@@ -98,8 +98,8 @@ const projectsByLevel = {
       github: "#",
       difficulty: "Intermedio",
       media: [
-        { type: "image", src: "/graphql-explorer.jpg" },
-        { type: "image", src: "/api-design.jpg" },
+        { type: "image" as const, src: "/graphql-explorer.jpg" },
+        { type: "image" as const, src: "/api-design.jpg" },
       ],
       recommendation: "Entiende por qué GraphQL es mejor que REST. Implementa queries y mutations complejas.",
     },
@@ -113,8 +113,8 @@ const projectsByLevel = {
       github: "#",
       difficulty: "Intermedio",
       media: [
-        { type: "image", src: "/placeholder.svg?height=400&width=600" },
-        { type: "image", src: "/placeholder.svg?height=400&width=600" },
+        { type: "image" as const, src: "/placeholder.svg?height=400&width=600" },
+        { type: "image" as const, src: "/placeholder.svg?height=400&width=600" },
       ],
       recommendation: "Domina Spring Boot para backend profesional. Aprende sobre seguridad y autorización.",
     },
@@ -128,8 +128,8 @@ const projectsByLevel = {
       github: "#",
       difficulty: "Intermedio",
       media: [
-        { type: "image", src: "/placeholder.svg?height=400&width=600" },
-        { type: "image", src: "/placeholder.svg?height=400&width=600" },
+        { type: "image" as const, src: "/placeholder.svg?height=400&width=600" },
+        { type: "image" as const, src: "/placeholder.svg?height=400&width=600" },
       ],
       recommendation: "Crea dashboards profesionales con gráficas y gestión de usuarios en tiempo real.",
     },
@@ -145,9 +145,9 @@ const projectsByLevel = {
       github: "#",
       difficulty: "Avanzado",
       media: [
-        { type: "image", src: "/placeholder.svg?height=400&width=600" },
-        { type: "image", src: "/placeholder.svg?height=400&width=600" },
-        { type: "image", src: "/placeholder.svg?height=400&width=600" },
+        { type: "image" as const, src: "/placeholder.svg?height=400&width=600" },
+        { type: "image" as const, src: "/placeholder.svg?height=400&width=600" },
+        { type: "image" as const, src: "/placeholder.svg?height=400&width=600" },
       ],
       recommendation: "Construye un SaaS completo: multi-tenancy, suscripciones y pagos con Stripe.",
     },
@@ -161,9 +161,9 @@ const projectsByLevel = {
       github: "#",
       difficulty: "Avanzado",
       media: [
-        { type: "image", src: "/placeholder.svg?height=400&width=600" },
-        { type: "image", src: "/placeholder.svg?height=400&width=600" },
-        { type: "image", src: "/placeholder.svg?height=400&width=600" },
+        { type: "image" as const, src: "/placeholder.svg?height=400&width=600" },
+        { type: "image" as const, src: "/placeholder.svg?height=400&width=600" },
+        { type: "image" as const, src: "/placeholder.svg?height=400&width=600" },
       ],
       recommendation: "Diseña y despliega una arquitectura escalable con múltiples microservicios.",
     },
@@ -177,8 +177,8 @@ const projectsByLevel = {
       github: "#",
       difficulty: "Avanzado",
       media: [
-        { type: "image", src: "/placeholder.svg?height=400&width=600" },
-        { type: "image", src: "/placeholder.svg?height=400&width=600" },
+        { type: "image" as const, src: "/placeholder.svg?height=400&width=600" },
+        { type: "image" as const, src: "/placeholder.svg?height=400&width=600" },
       ],
       recommendation: "Implementa colaboración en tiempo real con sincronización y seguridad avanzada.",
     },
@@ -192,8 +192,8 @@ const projectsByLevel = {
       github: "#",
       difficulty: "Avanzado",
       media: [
-        { type: "image", src: "/placeholder.svg?height=400&width=600" },
-        { type: "image", src: "/placeholder.svg?height=400&width=600" },
+        { type: "image" as const, src: "/placeholder.svg?height=400&width=600" },
+        { type: "image" as const, src: "/placeholder.svg?height=400&width=600" },
       ],
       recommendation: "Despliega aplicaciones empresariales con seguridad, compliance y monitoreo continuo.",
     },
@@ -205,7 +205,7 @@ export default function Projects() {
 
   const allProjects = [...projectsByLevel.basico, ...projectsByLevel.intermedio, ...projectsByLevel.avanzado]
 
-  const project = selectedProject ? allProjects.find((p) => p.id === selectedProject) : null
+  const project = (selectedProject ? allProjects.find((p) => p.id === selectedProject) : null) ?? null
 
   return (
     <>
