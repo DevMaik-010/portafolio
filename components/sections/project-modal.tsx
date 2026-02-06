@@ -1,8 +1,8 @@
 "use client"
 
-import { X, ChevronLeft, ChevronRight, Play, ExternalLink } from "lucide-react"
+import { X, ChevronLeft, ChevronRight, Play } from "lucide-react"
 import { useState } from "react"
-import { Button } from "@/components/ui/button"
+import Image from "next/image"
 
 interface ProjectMedia {
   type: "image" | "video"
@@ -60,10 +60,12 @@ export default function ProjectModal({ project, onClose }: { project: Project | 
           <div className="space-y-4">
             <div className="relative w-full bg-muted/20 rounded-xl overflow-hidden aspect-video">
               {currentMedia.type === "image" ? (
-                <img
+                <Image
                   src={currentMedia.src || "/placeholder.svg"}
                   alt={`${project.title} screenshot ${currentMediaIndex + 1}`}
                   className="w-full h-full object-cover"
+                  width={900}
+                  height={900}
                 />
               ) : (
                 <video
@@ -107,15 +109,17 @@ export default function ProjectModal({ project, onClose }: { project: Project | 
                   <button
                     key={idx}
                     onClick={() => setCurrentMediaIndex(idx)}
-                    className={`flex-shrink-0 w-16 h-16 rounded-lg border-2 transition-all overflow-hidden ${
+                    className={`shrink-0 w-16 h-16 rounded-lg border-2 transition-all overflow-hidden ${
                       idx === currentMediaIndex ? "border-primary" : "border-border hover:border-primary/50"
                     }`}
                   >
                     {media.type === "image" ? (
-                      <img
+                      <Image
                         src={media.src || "/placeholder.svg"}
                         alt={`Thumbnail ${idx + 1}`}
                         className="w-full h-full object-cover"
+                        width={64}
+                        height={64}
                       />
                     ) : (
                       <div className="w-full h-full bg-muted/20 flex items-center justify-center">
@@ -147,24 +151,6 @@ export default function ProjectModal({ project, onClose }: { project: Project | 
                   </div>
                 ))}
               </div>
-            </div>
-
-            <div>
-              <h3 className="text-sm font-semibold text-muted mb-2">Recomendación</h3>
-              <div className="p-4 rounded-lg bg-accent/5 border border-accent/20">
-                <p className="text-sm text-accent">{project.recommendation}</p>
-              </div>
-            </div>
-
-            {/* Action buttons */}
-            <div className="flex gap-3 pt-4">
-              <Button className="flex-1 gap-2">
-                <ExternalLink className="w-4 h-4" />
-                Ver Proyecto
-              </Button>
-              <Button variant="outline" className="flex-1 gap-2 bg-transparent">
-                Ver Código en GitHub
-              </Button>
             </div>
           </div>
         </div>

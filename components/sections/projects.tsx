@@ -7,196 +7,110 @@ import { Github, Play } from "lucide-react"
 import { useState } from "react"
 import ProjectModal from "./project-modal"
 import { getTechColor } from "@/components/tech-colors"
+import Image from "next/image"
 
 const projectsByLevel = {
   basico: [
     {
-      id: "task-manager",
-      title: "Gestor de Tareas REST API",
-      description: "API REST simple con CRUD completo, validación y autenticación JWT",
-      image: "/task-manager.jpg",
-      technologies: ["Express.js", "PostgreSQL", "REST API", "JWT"],
+      id: "gestion-libros",
+      title: "Gestion de Libros",
+      description: "Crud basico de libros con login y registro.",
+      image: "/basico01/basico1_1.webp",
+      technologies: ["Python", "Tkinter", "PostgreSQL"],
       link: "#",
       github: "#",
       difficulty: "Básico",
       media: [
-        { type: "image" as const, src: "/task-api.jpg" },
-        { type: "image" as const, src: "/api-docs.jpg" },
+        { type: "image" as const, src: "/basico01/basico1_1.webp" },
+        { type: "image" as const, src: "/basico01/basico1_2.webp" },
+        { type: "image" as const, src: "/basico01/basico1_3.webp" },
+        { type: "image" as const, src: "/basico01/basico1_4.webp" },
       ],
       recommendation: "Perfecto para aprender REST APIs y Express.js. Inicia con modelos básicos de datos.",
     },
     {
-      id: "react-crud",
-      title: "CRUD Frontend con React",
-      description: "Interfaz interactiva con React para gestionar datos conectada a una API",
-      image: "/react-interface.jpg",
-      technologies: ["React", "TypeScript", "Fetch API", "CSS"],
+      id: "crudestudiantes",
+      title: "Gestion de tareas",
+      description: "Interfaz interactiva con Flask para gestionar tareas conectada a una API",
+      image: "/basico02/basico2_1.webp",
+      technologies: ["Python", "Flask", "PostgreSQL", "HTML", "CSS", "JavaScript"],
       link: "#",
       github: "#",
       difficulty: "Básico",
       media: [
-        { type: "image" as const, src: "/react-components.jpg" },
-        { type: "image" as const, src: "/form-validation.jpg" },
+        { type: "image" as const, src: "/basico02/basico2_1.webp" },
+        { type: "image" as const, src: "/basico02/basico2_2.webp" },
+        { type: "image" as const, src: "/basico02/basico2_3.webp" },
+        { type: "image" as const, src: "/basico02/basico2_4.webp" },
+        { type: "image" as const, src: "/basico02/basico2_5.webp" },
+        { type: "image" as const, src: "/basico02/basico2_6.webp" },
+        { type: "image" as const, src: "/basico02/basico2_7.webp" },
+        
       ],
       recommendation: "Aprende gestión de estado con hooks (useState, useEffect) y consumo de APIs.",
-    },
-    {
-      id: "python-db",
-      title: "Python CLI con MySQL",
-      description: "Aplicación de línea de comandos en Python conectada a MySQL",
-      image: "/python-cli.jpg",
-      technologies: ["Python", "MySQL", "SQLAlchemy", "CLI"],
-      link: "#",
-      github: "#",
-      difficulty: "Básico",
-      media: [
-        { type: "image" as const, src: "/python-app.jpg" },
-        { type: "image" as const, src: "/database-schema.jpg" },
-      ],
-      recommendation: "Domina conexiones a bases de datos y operaciones CRUD desde Python.",
-    },
-    {
-      id: "fastapi-intro",
-      title: "FastAPI Básico",
-      description: "API simple con FastAPI incluyendo validación automática de datos",
-      image: "/fastapi.jpg",
-      technologies: ["FastAPI", "Python", "Pydantic", "PostgreSQL"],
-      link: "#",
-      github: "#",
-      difficulty: "Básico",
-      media: [
-        { type: "image" as const, src: "/swagger-ui.jpg" },
-        { type: "image" as const, src: "/api-validation.jpg" },
-      ],
-      recommendation: "Aprende FastAPI como alternativa moderna a Flask. Documentación automática incluida.",
-    },
+    }
+    
   ],
   intermedio: [
     {
-      id: "nextjs-blog",
-      title: "Blog Fullstack con Next.js",
-      description: "Blog completo con autenticación, crear/editar posts, comentarios y búsqueda avanzada",
-      image: "/nextjs-blog.jpg",
-      technologies: ["Next.js", "React", "PostgreSQL", "TypeScript", "REST API"],
+      id: "edusentri",
+      title: "EduSentri",
+      description: "Aplicación web para simulacros de examen para la educación superior.",
+      image: "/edu-sentri/edusentri_01.webp",
+      technologies: ["Next.js", "PostgreSQL", "TypeScript", "Supabase", "Tailwind CSS"],
       link: "#",
       github: "#",
       difficulty: "Intermedio",
       media: [
-        { type: "image" as const, src: "/blog-home.jpg" },
-        { type: "image" as const, src: "/post-editor.jpg" },
-        { type: "image" as const, src: "/general-data-dashboard.png" },
+        { type: "image" as const, src: "/edu-sentri/edusentri_01.webp" },
+        { type: "image" as const, src: "/edu-sentri/edusentri_02.webp" },
+        { type: "image" as const, src: "/edu-sentri/edusentri_03.webp" },
+        { type: "image" as const, src: "/edu-sentri/edusentri_04.webp" },
+        { type: "image" as const, src: "/edu-sentri/edusentri_05.webp" },
       ],
       recommendation: "Integra Next.js con PostgreSQL, implementa autenticación y server-side rendering.",
-    },
-    {
-      id: "graphql-social",
-      title: "API GraphQL con FastAPI",
-      description: "Red social con GraphQL: usuarios, posts, likes, comentarios y búsqueda de usuarios",
-      image: "/graphql-logo.png",
-      technologies: ["FastAPI", "GraphQL", "Python", "PostgreSQL", "Strawberry"],
-      link: "#",
-      github: "#",
-      difficulty: "Intermedio",
-      media: [
-        { type: "image" as const, src: "/graphql-explorer.jpg" },
-        { type: "image" as const, src: "/api-design.jpg" },
-      ],
-      recommendation: "Entiende por qué GraphQL es mejor que REST. Implementa queries y mutations complejas.",
-    },
-    {
-      id: "spring-auth",
-      title: "Autenticación con Spring Boot",
-      description: "Microservicio de autenticación con JWT, roles y permisos granulares",
-      image: "/placeholder.svg?height=300&width=400",
-      technologies: ["Spring Boot", "Java", "PostgreSQL", "JWT", "Spring Security"],
-      link: "#",
-      github: "#",
-      difficulty: "Intermedio",
-      media: [
-        { type: "image" as const, src: "/placeholder.svg?height=400&width=600" },
-        { type: "image" as const, src: "/placeholder.svg?height=400&width=600" },
-      ],
-      recommendation: "Domina Spring Boot para backend profesional. Aprende sobre seguridad y autorización.",
-    },
-    {
-      id: "realtime-dashboard",
-      title: "Dashboard Admin Reactivo",
-      description: "Panel administrativo con gráficas en tiempo real, usuarios, roles y auditoría",
-      image: "/placeholder.svg?height=300&width=400",
-      technologies: ["React", "TypeScript", "Express.js", "PostgreSQL", "WebSockets"],
-      link: "#",
-      github: "#",
-      difficulty: "Intermedio",
-      media: [
-        { type: "image" as const, src: "/placeholder.svg?height=400&width=600" },
-        { type: "image" as const, src: "/placeholder.svg?height=400&width=600" },
-      ],
-      recommendation: "Crea dashboards profesionales con gráficas y gestión de usuarios en tiempo real.",
     },
   ],
   avanzado: [
     {
-      id: "ecommerce-saas",
-      title: "Plataforma E-commerce SaaS",
-      description: "Plataforma multi-tenant con suscripciones, pagos, carrito y órdenes",
-      image: "/placeholder.svg?height=300&width=400",
-      technologies: ["Next.js", "React", "PostgreSQL", "Stripe API", "TypeScript", "Docker"],
+      id: "sentricloud",
+      title: "SentriCloud",
+      description: "Plataforma de despliegue de aplicaciones web, gestion de vps.",
+      image: "/sentri-cloud/cloud_01.webp",
+      technologies: ["Next.js", "PostgreSQL", "FastAPI", "TypeScript", "Docker", "Proxmox"],
       link: "#",
       github: "#",
       difficulty: "Avanzado",
       media: [
-        { type: "image" as const, src: "/placeholder.svg?height=400&width=600" },
-        { type: "image" as const, src: "/placeholder.svg?height=400&width=600" },
-        { type: "image" as const, src: "/placeholder.svg?height=400&width=600" },
+        { type: "image" as const, src: "/sentri-cloud/cloud_01.webp" },
+        { type: "image" as const, src: "/sentri-cloud/cloud_02.webp" },
+        { type: "image" as const, src: "/sentri-cloud/cloud_03.webp" },
+        { type: "image" as const, src: "/sentri-cloud/cloud_04.webp" },
+        { type: "image" as const, src: "/sentri-cloud/cloud_05.webp" },
+        { type: "image" as const, src: "/sentri-cloud/cloud_06.webp" },
       ],
-      recommendation: "Construye un SaaS completo: multi-tenancy, suscripciones y pagos con Stripe.",
+      recommendation: "Despliega tus aplicaciones web en la nube con SentriCloud.",
     },
     {
-      id: "microservices-arch",
-      title: "Arquitectura de Microservicios",
-      description: "5+ microservicios con API Gateway, descubrimiento de servicios y logs centralizados",
-      image: "/placeholder.svg?height=300&width=400",
+      id: "sentinel_guard",
+      title: "Sentinel Guard",
+      description: "Sistema de monitoreo de seguridad con reconocimiento facial y movimiento con IA.",
+      image: "/sentinel-guard/sentinel_guard_01.webp",
       technologies: ["Java", "Spring Boot", "PostgreSQL", "Docker", "Kubernetes", "Redis"],
       link: "#",
       github: "#",
       difficulty: "Avanzado",
       media: [
-        { type: "image" as const, src: "/placeholder.svg?height=400&width=600" },
-        { type: "image" as const, src: "/placeholder.svg?height=400&width=600" },
-        { type: "image" as const, src: "/placeholder.svg?height=400&width=600" },
+        { type: "image" as const, src: "/sentinel-guard/sentinel_guard_01.webp" },
+        { type: "image" as const, src: "/sentinel-guard/sentinel_guard_02.webp" },
+        { type: "image" as const, src: "/sentinel-guard/sentinel_guard_03.webp" },
+        { type: "image" as const, src: "/sentinel-guard/sentinel_guard_04.webp" },
+        { type: "image" as const, src: "/sentinel-guard/sentinel_guard_05.webp" },
+        { type: "image" as const, src: "/sentinel-guard/sentinel_guard_06.webp" },
+        { type: "image" as const, src: "/sentinel-guard/sentinel_guard_07.webp" }
       ],
-      recommendation: "Diseña y despliega una arquitectura escalable con múltiples microservicios.",
-    },
-    {
-      id: "realtime-collaboration",
-      title: "Plataforma Colaborativa en Tiempo Real",
-      description: "Editor colaborativo con WebSockets, Sentinel Guard para seguridad y versionado",
-      image: "/placeholder.svg?height=300&width=400",
-      technologies: ["Next.js", "WebSockets", "PostgreSQL", "Redis", "Sentinel Guard", "TypeScript"],
-      link: "#",
-      github: "#",
-      difficulty: "Avanzado",
-      media: [
-        { type: "image" as const, src: "/placeholder.svg?height=400&width=600" },
-        { type: "image" as const, src: "/placeholder.svg?height=400&width=600" },
-      ],
-      recommendation: "Implementa colaboración en tiempo real con sincronización y seguridad avanzada.",
-    },
-    {
-      id: "secure-cloud-platform",
-      title: "Plataforma en Nube Segura",
-      description: "Backend seguro con Sentri Cloud, monitoreo de seguridad y compliance HIPAA/PCI",
-      image: "/placeholder.svg?height=300&width=400",
-      technologies: ["Spring Boot", "PostgreSQL", "Sentri Cloud", "Oracle", "Docker", "Kubernetes"],
-      link: "#",
-      github: "#",
-      difficulty: "Avanzado",
-      media: [
-        { type: "image" as const, src: "/placeholder.svg?height=400&width=600" },
-        { type: "image" as const, src: "/placeholder.svg?height=400&width=600" },
-      ],
-      recommendation: "Despliega aplicaciones empresariales con seguridad, compliance y monitoreo continuo.",
-    },
+      recommendation: "Potencia tus camaras ip con IA para detectar movimiento y reconocimiento facial.",
+    }
   ],
 }
 
@@ -290,13 +204,14 @@ function ProjectCard({
     >
       {/* Image background */}
       <div className="relative w-full h-48 overflow-hidden bg-muted/10">
-        <img
+        <Image
           src={project.image || "/placeholder.svg"}
           alt={project.title}
           className="w-full h-full object-cover opacity-30 group-hover:opacity-50 transition-all duration-500 group-hover:scale-105"
+          width={800}
+          height={800}
         />
         <div className="absolute inset-0 bg-linear-to-b from-transparent via-transparent to-card/80"></div>
-
       </div>
 
       {/* Content */}
@@ -344,15 +259,7 @@ function ProjectCard({
             }}
           >
             <Play className="w-3.5 h-3.5 group-hover:scale-110 transition-transform" />
-            Ver Demo
-          </Button>
-          <Button
-            size="sm"
-            variant="outline"
-            className="flex-1 gap-1.5 bg-transparent hover:bg-secondary/10 transition-all duration-300"
-          >
-            <Github className="w-3.5 h-3.5" />
-            Código
+            Ver Proyecto
           </Button>
         </div>
       </div>

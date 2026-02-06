@@ -9,10 +9,12 @@ const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "DevSecOps Engineer | Cloud Architect | Fullstack Developer",
+  title: "Fullstack Developer",
   description:
     "Especializado en automatización, infraestructura moderna, seguridad multicapa y despliegues escalables.",
-  generator: "v0.app",
+  icons: {
+    icon: "/favicon.ico",
+  },
 }
 
 export default function RootLayout({

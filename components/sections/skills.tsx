@@ -6,39 +6,39 @@ import { Badge } from "@/components/ui/badge"
 const skillsData = [
   {
     category: "Backend",
-    items: ["FastAPI", "Spring Boot", "Express.js", "Node.js", "GraphQL"],
+    items: ["FastAPI", "Spring Boot", "Express.js", "Node.js"],
     icon: "⚙️",
   },
   {
     category: "Frontend",
-    items: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Responsive Design"],
+    items: ["React", "Next.js", "Angular"],
     icon: "🎨",
   },
   {
     category: "Bases de Datos",
-    items: ["PostgreSQL", "MySQL", "Oracle", "MongoDB", "Redis"],
+    items: ["PostgreSQL", "MySQL", "Oracle", "Redis"],
     icon: "🗄️",
   },
   {
     category: "DevSecOps",
-    items: ["Docker", "Kubernetes", "CI/CD", "GitHub Actions", "Sentinel Guard", "Sentri Cloud"],
+    items: ["Docker", "Docker Compose", "Proxmox", "MCP Server", "N8N"],
     icon: "🔒",
   },
   {
     category: "APIs",
-    items: ["REST APIs", "GraphQL", "WebSockets", "API Documentation", "Rate Limiting"],
+    items: ["REST APIs", "GraphQL", "WebSockets", "GRPC"],
     icon: "🔌",
   },
   {
     category: "Herramientas",
-    items: ["Git", "Linux", "AWS", "Postman", "Jira"],
+    items: ["Git", "Github", "Linux", "Postman"],
     icon: "🛠️",
   },
 ]
 
 export default function Skills() {
   return (
-    <section className="py-20 md:py-32 bg-gradient-to-b from-background via-primary/5 to-background">
+    <section className="py-20 md:py-32 bg-linear-to-b from-background via-primary/5 to-background">
       <div className="container px-4 md:px-8">
         <div className="mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-balance">Habilidades y Tecnologías</h2>
